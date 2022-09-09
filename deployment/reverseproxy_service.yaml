@@ -11,14 +11,3 @@ spec:
     targetPort: 8080
   selector:
     service: reverseproxy
-
-
-kubectl apply -f backend_user_deployment.yaml
-kubectl apply -f frontend_deployment.yaml
-kubectl apply -f reverseproxy_deployment.yaml
-kubectl apply -f backend_user_service.yaml
-kubectl apply -f frontend_service.yaml
-kubectl apply -f reverseproxy_service.yaml
-
-kubectl expose deployment reverseproxy --type=LoadBalancer --name=publicreverseproxy
-    
