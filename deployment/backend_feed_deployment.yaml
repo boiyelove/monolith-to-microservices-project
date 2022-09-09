@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: boiyelove/udagram-api-feed
+        image: boiyeove/udagram-api-feed
         ports:
         - containerPort: 80
         resources:
