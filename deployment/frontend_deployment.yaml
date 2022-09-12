@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: docker.io/boiyeove/udagram-frontend:v2
+        image: docker.io/boiyeove/udagram-frontend:v8
         ports:
         - containerPort: 80
         envFrom:

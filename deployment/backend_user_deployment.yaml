@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: docker.io/boiyeove/udagram-api-user:v2
+        image: docker.io/boiyeove/udagram-api-user:v8
         ports:
         - containerPort: 80
         resources:
