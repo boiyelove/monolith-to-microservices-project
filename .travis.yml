@@ -20,14 +20,14 @@ script:
   - docker build -t udagram-frontend ./udagram-frontend
   - docker build -t reverseproxy ./udagram-reverseproxy
 
-  - docker tag udagram-api-feed boiyeove/udagram-api-feed:v7
-  - docker tag udagram-api-user boiyeove/udagram-api-user:v7
-  - docker tag udagram-frontend boiyeove/udagram-frontend:v7
-  - docker tag reverseproxy boiyeove/reverseproxy:v7
+  - docker tag udagram-api-feed boiyeove/udagram-api-feed:v9
+  - docker tag udagram-api-user boiyeove/udagram-api-user:v9
+  - docker tag udagram-frontend boiyeove/udagram-frontend:v9
+  - docker tag reverseproxy boiyeove/reverseproxy:v9
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push boiyeove/udagram-api-feed:v7
-  - docker push boiyeove/udagram-api-user:v7
-  - docker push boiyeove/reverseproxy:v7
-  - docker push boiyeove/udagram-frontend:v7
+  - docker push boiyeove/udagram-api-feed:v9
+  - docker push boiyeove/udagram-api-user:v9
+  - docker push boiyeove/reverseproxy:v9
+  - docker push boiyeove/udagram-frontend:v9
