@@ -16,16 +16,27 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: docker.io/boiyeove/udagram-api-user:v8
+        image: docker.io/boiyeove/udagram-api-user:v7
         ports:
         - containerPort: 80
         resources:
-          requests:
-            memory: "1Gi"
-            cpu: "1024m"
           limits:
-            memory: "2Gi"
-            cpu: "1024m"
+            cpu: 500m
+          requests:
+            cpu: 200m
         envFrom:
           - configMapRef:
               name: env-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-user
+  labels:
+    run: backend-user
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: backend-user

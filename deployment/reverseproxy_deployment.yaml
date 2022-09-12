@@ -15,7 +15,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: docker.io/boiyeove/reverseproxy:v8
+      - image: docker.io/boiyeove/reverseproxy:v7
         name: reverseproxy
         imagePullPolicy: Always          
         resources:
